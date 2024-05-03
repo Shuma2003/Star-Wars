@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 47%, rgba(150,150,193,1) 81%);
+display: block;
+text-align: justify;
+justify-items: baseline;
+
+
+}
+header {
+    background-color: #000000;
+    padding: 10px 0;
+    text-align: center;
+}
+h1{
+    color: white;
+}
+h2{
+    color: white;
+}
+p{
+    color: white;
+}
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: 900px;
+    margin-left: 400px;
+}
+.card-2{
+margin-top: -840px;
+margin-left: 350px;
+padding: 20px;
+border: 2px solid rgb(255, 253, 253);
+}
+.card-3{
+    margin-left: 660px;
+    margin-top: -805px;
+    padding: 20px;
+border: 2px solid rgb(255, 253, 253);
+}
+.card-4{
+    margin-left: 999px;
+    margin-top: -850px;
+    padding: 20px;
+border: 2px solid rgb(255, 253, 253);
+}
+.card-5{
+    padding: 20px;
+border: 2px solid rgb(255, 253, 253);
+}
+.card-6{
+    padding: 20px;
+    border: 2px solid rgb(255, 253, 253);
+    margin-left: 399px;
+    margin-top: -750px;
+
+}
+.card-text{
+    color: black;
+}
+article {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.date {
+    color: #888;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: block;
+    text-align: right;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.cardtext-bg-dark-3{
+margin-top: 650px;
+}
+form {
+    display: grid;
+    gap: 10px;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+address {
+    font-style: normal;
+    text-align: center;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+}
+/* scenes (the good stuff) */
+
+@keyframes scene-transition {
+    25% {
+      filter: brightness(100%);
+    }
+    100% {
+      filter: brightness(100%);
+      -webkit-mask-size: 1800%;
+    }
+  }
+  
+  .scenes {
+    position: relative;
+    aspect-ratio: 2.4 / 1;
+    outline: 2px solid #ccc;
+  }
+  
+  .scene-1, .scene-2 {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+  }
+  
+  .scene-1 {
+    background-image:
+      radial-gradient(circle, #fff3 10%, transparent 20%),
+      url(https://assets.codepen.io/77020/sw-shape-zoom-scene-1.jpg);
+  }
+  
+  .scene-2 {
+    background-image: url(https://assets.codepen.io/77020/sw-shape-zoom-scene-2.jpg);
+    filter: brightness(0%);
+    -webkit-mask-image: url(https://assets.codepen.io/77020/sw-jedi-crest.svg);
+    -webkit-mask-size: 10%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
+  
+  .scenes:is(:hover, :focus) .scene-2 {
+    animation: scene-transition 4s cubic-bezier(1, 0, 1, 1) forwards;
+  }
+  
+  .scene-title {
+    position: absolute;
+    max-width: 45%;
+    margin: min(40px, 4vw);
+    font-size: 1.25em;
+  }
+  
+  .scene-1 .scene-title {
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    text-align: left;
+  }
+  
+  .scene-2 .scene-title {
+    top: 0;
+    left: 0;
+    color: #fff;
+    text-align: left;
+  }
+  
+  /* everything else */
+  
+  @keyframes visual-transition {
+    25% {
+      background-color: #808080;
+    }
+    100% {
+      background-color: #808080;
+    }
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+
+  
+  .wrapper {
+    display: grid;
+    gap: 30px;
+    width: min(1000px, 100%);
+  }
+  
+  .intro {
+    text-align: center;
+  }
+  
+  .heading {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  
+  .heading::before, .heading::after {
+    content: ' — ';
+  }
+  
+  .nudge {
+    margin: 0;
+    color: #888;
+    font-size: 1.25em;
+  }
+  
+  .visualizer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .visualizer-frame-1, .visualizer-frame-2 {
+    position: relative;
+    width: min(150px, 25vw);
+    aspect-ratio: 2.4 / 1;
+    outline: 2px solid #ccc;
+    background-color: #333;
+    background-image:
+      linear-gradient(45deg, #444 25%, transparent 25%, transparent 75%, #444 75%),
+      linear-gradient(45deg, #444 25%, transparent 25%, transparent 75%, #444 75%);
+    background-size:
+      16px 16px,
+      16px 16px;
+    background-position:
+      0 0,
+      8px 8px;
+  }
+  
+  .visualizer-mask {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 0 2px #111;
+  }
+  
+  .visualizer-frame-1 .visualizer-mask {
+    background-color: #000;
+  }
+  
+  .visualizer-frame-2 .visualizer-mask {
+    background-image: url(https://assets.codepen.io/77020/sw-jedi-crest.svg);
+    background-size: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .scenes:is(:hover, :focus) + .visualizer .visualizer-frame-1 .visualizer-mask {
+    animation: visual-transition 4s cubic-bezier(1, 0, 1, 1) forwards;
+  }
+  
+  .scenes:is(:hover, :focus) + .visualizer .visualizer-frame-2 .visualizer-mask {
+    background-size: 1800%;
+    transition: background-size 4s cubic-bezier(1, 0, 1, 1);
+  }
+  
+  .operator {
+    display: grid;
+    place-items: center;
+    font-size: 1.25em;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 8px;
+    text-align: left;
+    background-color: #fff;
+}
+th {
+    background-color: #f2f2f2;
+}
+button { 
+    color: rgb(190, 62, 62);
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
