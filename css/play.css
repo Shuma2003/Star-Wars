@@ -1,0 +1,154 @@
+  :root {
+    --primary-color: #121420;
+    --secondary-color: #1e2a47;
+    --accent-color: #f5d742;
+    --text-color: #ffffff;
+    --dark-side: #8b0000;
+    --light-side: #4169e1;
+  }
+  
+  body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Шапка */
+  header {
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  h1 {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+  
+  /* Основное содержимое */
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  h2 {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(245, 215, 66, 0.2);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid var(--accent-color);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-text {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e0c63d;
+    transform: scale(1.05);
+    color: var(--primary-color);
+  }
+  
+  /* Подвал */
+  footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .games-container {
+      grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
